@@ -6,12 +6,11 @@
 #
 # Apply the loop invariant phrase concept
 # 
-list = [7]
+list = [5, 7]
 length = len(list)
 left = 0
 right = int(length / 2)
-k = 7
-
+k = 9
 result = -1
 
 while left <= right:
@@ -19,6 +18,12 @@ while left <= right:
         print(str(k) + ' was found at index ' + str(right))
         result = right
         break
+    if k < list[right]:
+        right = int((right / 2) -1)
+    if k > list[right]:
+        left = int((len(list) / 2) + 1)
+
+
 
 
 print(result)
