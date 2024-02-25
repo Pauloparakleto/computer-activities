@@ -10,7 +10,7 @@ list = [-5, -3, 0, 10, 20, 30, 40, 100, 10000]
 length = len(list)
 left = 0
 right = length - 1
-k = -5
+k = 20000
 
 result = -1
 
@@ -29,6 +29,8 @@ while left <= right:
 
         right = int(right / 2)
         print('the new middle right index is: ' + str(right))
+    if k > list[right]:
+        break
 
 
 print(result)
