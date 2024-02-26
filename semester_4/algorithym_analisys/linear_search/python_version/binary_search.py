@@ -14,11 +14,16 @@ k = 7
 
 result = -1
 
-while left <= right:
-    if k is list[right]:
+while len(list) > 0:
+    if k is list[right - 1]:
         print(str(k) + ' was found at index ' + str(right))
         result = right
         break
+    if k < list[right]:
+        right = int((len(list) / 2) - 1)
+        list = list[left:right]
+        print(list)
+        print(right)
 
 
 print(result)
