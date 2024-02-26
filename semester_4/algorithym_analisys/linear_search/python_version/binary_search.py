@@ -6,16 +6,17 @@
 #
 # Apply the loop invariant phrase concept
 # 
-list = [7]
+list = [6, 7]
 length = len(list)
 left = 0
-right = int(length / 2)
-k = 7
+right = int((length / 2) - 1)
+k = 6
 
 result = -1
 
 while len(list) > 0:
-    if k is list[right - 1]:
+    print('comparing ' + str(k) + ' to ' + str(list[right]))
+    if k is list[right]:
         print(str(k) + ' was found at index ' + str(right))
         result = right
         break
